@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 /*This  file registers  every  route in your project*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class,'index']);
 /*How to  pass a variable throught he view  function*/
 Route::get('/home', function () {
     return view('home', ['name'=>"Daniel"]);
@@ -26,4 +25,9 @@ Route::get('/home', function () {
 /*How to  pass a variable throught he view  function*/
 Route::get('/home2', function () {
     return view('home', ['name'=>"Daniel"]);
+});
+
+/*How to  pass a variable throught he view  function*/
+Route::get('/about-us', function () {
+    return view('about', ['name'=>"Daniel"]);
 });
