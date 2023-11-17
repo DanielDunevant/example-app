@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home', ['name'=>"Daniel"]);
 });
+
+/*How to  pass a variable throught he view  function*/
+Route::get('/home2', function () {
+    return view('home', ['name'=>"Daniel"]);
+});
